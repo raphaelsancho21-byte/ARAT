@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arat-cli"
+version = "1.0.0"
+description = "ARAT - Acesso Remoto Ao Telefone: diagnóstico de rede e acesso Android autorizado"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "ARAT Project"}]
+dependencies = ["rich>=13.7,<15"]
+
+[project.scripts]
+arat = "arat.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["arat*"]
